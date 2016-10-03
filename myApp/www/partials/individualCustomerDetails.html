@@ -1,0 +1,118 @@
+<ul class="list card" data-ng-if='true'>
+	<li class="item item-thumbnail-left " >  
+		<h2><strong>{{getIndividualData().EnterpriseIndNonIndInfo.EnterpriseIndInfo.IndName.FirstName}}  {{getIndividualData().EnterpriseIndNonIndInfo.EnterpriseIndInfo.IndName.LastName}}</strong></h2>
+		<p> {{getIndividualData().EnterpriseID}}</p>
+		<p data-ng-if="getIndividualData().Email"><i class="icon ion-email emailAlign" ></i> {{getIndividualData().Email}}</p>
+		<p>Wallet: <i class="icon ion-social-usd blue"></i> <i class="icon ion-social-usd blue"></i></p>
+		<p class="enrolledproducts">
+			<span class="ion-android-done"></span><span class="blue">Mobile Banking</span><br>
+			<span class="ion-android-done"></span><span class="blue">Bill Pay</span><br>
+			<span class="ion-android-done"></span><span class="blue">Paperless</span>	
+		</p>
+	</li>
+	<li>
+		<div class="row">
+			<div class="col removeItemBdr">				
+				<ion-toggle ng-model="mask" toggle-class="toggle-positive" data-ng-change="toggleChange()">
+					<span class="subhead1">SSN/TIN</span>
+					<div><span ng-show="!mask">XXXXX{{getIndividualData().SSNTIN.slice(5)}}</span><span ng-show="mask">{{getIndividualData().SSNTIN}}</span></div>
+				</ion-toggle>
+				
+			</div>
+			
+			<div class="col removeItemBdr" data-ng-if="getIndividualData().DOB">
+				<ion-toggle ng-model="dob" toggle-class="toggle-positive">
+				  <span class="subhead1">Birth Date</span>
+				<div>
+					<span ng-show="dob">{{getIndividualData().DOB}}</span>
+					<span ng-show="!dob">XXXX{{getIndividualData().DOB.slice(6)}}</span>
+				</div>				  
+				</ion-toggle>
+			</div>	
+
+			<div class="col costCntrPadd" data-ng-if="getIndividualData().COSTCENTER">
+				<span class="subhead1 costcenter">Cost Center</span>
+				<div>
+					{{getIndividualData().COSTCENTER}}
+				</div>
+			</div>				
+
+		</div>
+	</li>
+	
+	<li class="item item-divider contactmain">
+	CONTACT DETAILS</li>
+	<li class="costCntrPadd row" >
+		
+	 <span data-ng-repeat="customerPhoneNumber in getIndividualData().PHONENUMBER" class="col">
+	 <span data-ng-if="customerPhoneNumber.homeWorkCode == 'HOME'" class="icon ion-home"><span  class="subHead" > Phone(Home):</span> ({{customerPhoneNumber.number.slice(0, 3)}})-{{customerPhoneNumber.number.slice(3, 6)}}-{{customerPhoneNumber.number.slice(6, 10)}}</span>
+	 <span data-ng-if="customerPhoneNumber.homeWorkCode == 'WORK'" class="icon ion-android-call" data-ng-show="showWorkPhone"><span  class="subHead" > Phone(Work):</span> ({{customerPhoneNumber.number.slice(0, 3)}})-{{customerPhoneNumber.number.slice(3, 6)}}-{{customerPhoneNumber.number.slice(6, 10)}}</span>
+	 </span>
+	 
+	 <span class="col">
+	<a href="#" data-ng-hide="more" class="" data-ng-click="showWorkPhone= !showWorkPhone;more = !more; less = !less" >Show more</a>
+	<a href="#" data-ng-show="less" class="" data-ng-click="showWorkPhone= !showWorkPhone;less = !less;more=!more;">Show less</a></span>
+	</li>
+	
+	<li class="item item-divider item-icon-right">
+		ADDITIONAL DETAILS
+		<div class="icon " data-ng-click="showAddicon = !showAddicon;showAddress=!showAddress;">
+		<button class=" ion-plus-round" data-ng-show="!showAddicon"  ></button>
+		  <button data-ng-show="showAddicon" class=" ion-minus-round" ></button>
+		</div>
+	</li>
+	<li class="item" data-ng-show="showAddress">                    
+		<div class="marLeft addressmain detailmain">
+			<div data-ng-if="(getIndividualData().Address.AddressLine1)"><span class="subHead">Street:</span> {{getIndividualData().Address.AddressLine1}}</div>
+			<div data-ng-if="(getIndividualData().Address.City)"><span class="subHead">City:</span> {{getIndividualData().Address.City}}</div>
+			<div data-ng-if="(getIndividualData().Address.State.Code)"><span class="subHead">State:</span> {{getIndividualData().Address.State.Code}}</div>
+			<div data-ng-if="(getIndividualData().Address.PostalArea)"><span class="subHead">Postal Area:</span> {{getIndividualData().Address.PostalArea}}</div>
+			<div data-ng-if="(getIndividualData().Address.Country)"><span class="subHead">Country:</span> {{getIndividualData().Address.Country}}</div>	
+		</div>
+		<div class="marLeft addressmain">
+			<div ><span class="subHead">LOB Indicator:</span> CREDIT_CARD_RELATED_SERVICES</div>
+			<div><span class="subHead">Military:</span> No</div>
+			<div><span class="subHead">Home Owner:</span> Yes</div>
+			<div><span class="subHead">&nbsp;</span></div>
+			<div><span class="subHead">&nbsp;</span></div>
+		</div>
+	</li>
+	<li class="item item-divider">RECENT ACTIVITIES</li>
+   <div class="swiper-wrapper-main">
+    <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="true" slides-per-view="3" space-between="95" pagination-clickable="false" centeredSlides = "false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 10,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
+            <ks-swiper-slide class="swiper-slide"  data-ng-repeat="recentActivities in getIndividualData().RecentActivities">
+            
+            <div class = "activity-container">
+            <div class = "activity-content-wrapper"> 
+              <span class = "activity-content-title">{{recentActivities.taskDescription}}</span> <br><br>
+              <span class = " activity-content-date">Date Of Occurrence : {{recentActivities.Date}}</span><br>
+              <span class="activity-desc-title">{{recentActivities.Category}}</span>
+              <div data-ng-if = "recentActivities.Status == 'completed'" >
+                 <span class = "activity-desc"> User requested more information about the Home Mortgage rates </span> 
+              </div>
+              <div data-ng-if = "recentActivities.Status == 'pending'" >
+                <span class = "activity-desc"> User requested cheque book to be delivered at Home address </span> 
+              </div> 
+              </div>
+
+            <!--  <div ng-switch on="recentActivities.Category">
+                  <div ng-switch-when="note">
+                       <img class="activity-icon" src ="../img/jake/svgs/note_icon.jpg"> 
+                  </div>
+                  <div ng-switch-when="Oppurtunity">
+                       <img class="activity-icon" src ="../img/jake/svgs/opportunity-icon.png">  
+                  </div>
+                  <div ng-switch-when="transaction">
+                      <img class="activity-icon" src ="../img/jake/svgs/transaction-icon.jpg"> 
+                  </div>
+                  <div ng-switch-default>
+                      <img class="activity-icon" src ="../img/jake/svgs/note_icon.jpg"> 
+                  </div>
+              </div> -->
+
+            </div>
+			
+            </ks-swiper-slide>  
+        </ks-swiper-container>
+        </div>
+</ul>

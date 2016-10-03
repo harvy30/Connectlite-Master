@@ -1,0 +1,264 @@
+/* Empty. Add your own CSS if you like */
+
+img.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.pane {
+		background: #00C9FF; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to bottom,rgba(178,178,178,1) 0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom,rgba(178,178,178,1) 0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%);
+}
+.bar.bar-positive{
+		background: linear-gradient(to bottom, #cccccc, #0c60ee 60%, transparent 200%) !important;
+		margin:0px;
+}
+
+.row > .col-right {
+	border-right: 1px solid #292929;
+	border-bottom: 1px solid #292929;
+	/*box-shadow: 2px 2px 2px #DB5E00;*/
+}
+.row > .noborder-right {
+	border-right:none;
+}
+.ion-ios-bell:before {
+    padding-left:10px;
+    color:#ffffff;
+}
+.badge.badge-assertive{
+    top: -16px;
+    left: -19px;
+    position: relative;
+}
+.modalhead {
+	position: relative;
+	background-color: #ccc;
+}
+.ion-close-round{
+	font-size:40px;
+	position: absolute;
+	right:3px;
+	top:-1px;
+}
+.Rproducts{
+	font-size:20px;
+	color:#ffffff;
+	padding-bottom: 12px;
+}
+
+.searchclient{
+	color:#ffffff;
+	font-size:20px;
+	padding-left:10px;
+	padding-bottom:8px;
+}
+.search-button{
+	border-radius: 15px;
+	width:100%;
+	font-size:30px;
+}
+.req{
+	color:#ffffff;
+	padding-left:1p0chasex;
+}
+.item{
+	margin-left:0px !important;
+	border-radius: 5px;
+}
+.item-avatar{
+	
+	/*background: url("/img/jake/appimg/avatar.jpg") 10px 5px no-repeat ,linear-gradient(to bottom, #cccccc, #0c60ee 60%, transparent 200%); */
+
+}
+.transaction10{
+	margin-left:30px;
+}
+.transaction10 li{
+	list-style: none;
+	font-size: 20px;
+	line-height: 2.4em;
+	background: #cccccc;
+    border-radius: 10px;
+    margin-right: 28px;
+    margin-bottom: 5px;
+    padding-left:10px;
+}
+.transaction10 h3{
+	border-top: 1px solid #111111;
+    margin-right: 29px;
+}
+.welcome-message, .welcome-message1{
+	text-align:center;
+	padding-top:150px;
+	color:#ffffff;
+}
+.welcome-message1{
+	padding-top:0px;
+}
+.modal-label{
+	color:#000;
+	font-size:19px;
+	font-weight:bold;
+}
+.button{
+	background-color:#0b6efd !important;
+}
+.button:hover{
+	background-color: #0a4386 !important;
+}
+
+/** Recent Activity Carousel  **/
+.activity-container 
+{
+	font-family:times new roman;
+
+	color:#23238e;
+	width:300px !important;
+}
+
+.activity-title
+{
+	font-weight:bold !important;
+   
+}
+.bar-positive h3{color:#fff;text-align: center;}
+
+
+.swiper-wrapper-main
+{
+	height: 11em;
+}
+
+.activity-icon
+{
+	height: 2em !important;
+    width: 10% !important;
+}
+    
+.activity-content-wrapper
+ {
+ 	margin-bottom: 0 px !important;
+ 	margin-top: 10px !important;
+ 	margin-top: 10px !important;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top:7px;
+ } 
+
+ .activity-content-title {
+ 	/*color: #0F5BA7;
+	font-size: 15px;
+	text-transform:uppercase; 
+	font-family: verdana, sans-serif;*/
+	
+	font-family: Gill Sans, Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #0F5BA7;
+
+
+ }   
+
+.activity-content-date
+{
+	  font-size: 85%;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #387EF5;
+      font-size: 10px;
+      font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+      font-weight: 100;
+}
+
+
+.activity-desc-title
+{
+	color: #111;
+     font-size: 12px;
+     font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+     font-size: 14px;
+     margin-top: .5em; 
+     text-decoration: underline;
+}
+
+.activity-desc{
+     color: #444444;
+     font-size: 12px;
+     font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+     font-size: 14px;
+     margin-top: .5em; color: #666;
+}
+.noClients{
+	padding-top: 20px;
+    font-size: 17px;
+}
+.marLeft{
+	margin-left:20px;
+}
+
+.activity-desc
+{
+	color: #444444;
+}
+/** Recent Activity Carousel  **/
+
+.bar-positive h2{color:#fff;text-align: center;}
+.item-avatar span{color:#fff;}
+.item-body{background: #fff;min-height:413px;}
+
+.row.header{
+	margin-bottom:10px;
+}
+
+.header .col{
+	border: 1px solid #cccccc;
+	color:#0b6efd;
+	text-align: center;
+}
+.address{
+	white-space: nowrap; 
+	overflow:hidden;
+}
+
+.textcenter{
+	text-align: center;
+}
+.contentrows{
+	height:45px;
+}
+.itemcompleted{
+	text-align: center;
+}
+
+@media (min-width: 680px){
+.modal {
+	width:78%;
+	left:10%;
+}}
+.subhead{
+	font-weight: 600;
+}
+.card{
+	margin-top: 5px;
+}
+
+/* index*/
+.searchClientForm{margin-top: 30px !important;}
+.searchClientForm .item{
+    border-radius: 5px;    background: none;
+    border-width: 0px; padding:5px;}
+    .searchClientForm .item-input-wrapper{padding:10px 10px 10px 10px; background: #fff;padding:7px;}
+    .searchClientForm .item-input-wrapper input{width:240px;}
+  .ion-ios-search{color:#fff;min-height:0px;}
+.searchClientForm button:hover{background-color:#0b6efd !important;color:white}
+
+.centerchase3{background-image: url("/img/jake/appimg/chase3.png");}
+.centerchase4{background-image: url("/img/jake/appimg/chase4.png");}
+.centerchase5{background-image: url("/img/jake/appimg/chase5.png");}
+.centerchase6{background-image: url("/img/jake/appimg/chase6.png");}

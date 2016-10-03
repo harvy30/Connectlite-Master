@@ -1,0 +1,394 @@
+{
+  "selectValues": [{
+    "name": "ACH/NACHA Rules",
+    "value": 100,
+    "checked":true,
+    "id": 1
+  }, {
+    "name": "Americans with Disabilities Act (ADA)",
+    "value": 101,
+    "checked":false,
+    "id": 2
+  }, {
+    "name": "Anti-Money Laundering (AML)/Bank Secrecy Act (BSA)",
+    "value": 102,
+    "checked":false,
+    "id": 3
+  }, {
+    "name": "Appraisal/Evaluation Guidelines ",
+    "value": 103,
+    "checked":false,
+    "id": 4
+  }, {
+    "name": "CAN SPAM Act",
+    "value": 104,
+    "checked":false,
+    "id": 5
+  }, {
+    "name": "Debt Cancellation & Suspension Agreements",
+    "value": 105,
+    "checked":false,
+    "id": 6
+  }, {
+    "name": "Elder Abuse (State Laws)",
+    "value": 106,
+    "checked":false,
+    "id": 7
+  }, {
+    "name": "Electronic Funds Transfer (EFT) Act – Reg. E",
+    "value": 107,
+    "checked":false,
+    "id": 8
+  }, {
+    "name": "Elder Abuse (State Laws)",
+    "value": 108,
+    "checked":false,
+    "id": 7
+  }, {
+    "name": "Equal Credit Opportunity Act (ECOA) - Reg. B",
+    "value": 109,
+    "checked":false,
+    "id": 8
+  }, {
+    "name": "E-Sign Act)",
+    "value": 110,
+    "checked":false,
+    "id": 9
+  }, {
+    "name": "Expedited Funds Availability Act – Reg. CC",
+    "value": 111,
+    "checked":false,
+    "id": 10
+  }, {
+    "name": "Fair Credit Reporting Act (FCRA) - Reg. V",
+    "value": 112,
+    "checked":false,
+    "id": 11
+  }, {
+    "name": "Fair Debt Collection Practices Act - Reg. F",
+    "value": 113,
+    "checked":false,
+    "id": 12
+  }, {
+    "name": "Fair Housing Act",
+    "value": 114,
+    "checked":false,
+    "id": 13
+  }, {
+    "name": "Federal Family Education Loan Program (FFELP)",
+    "value": 115,
+    "checked":false,
+    "id": 14
+  }, {
+    "name": "Flood Insurance Act",
+    "value": 116,
+    "checked":false,
+    "id": 15
+  }, {
+    "name": "Home Mortgage Disclosure Act (HMDA) – Reg. C",
+    "value": 117,
+    "checked":false,
+    "id": 16
+  }, {
+    "name": "Home Owners Protection Act",
+    "value": 118,
+    "checked":false,
+    "id": 17
+  }, {
+    "name": "Home Ownership and Equal Protection Act (HOEPA)",
+    "value": 119,
+    "checked":false,
+    "id": 18
+  }, {
+    "name": "Land Registration - Reg. J",
+    "value": 120,
+    "checked":false,
+    "id": 19
+  }, {
+    "name": "Mortgage Acts and Practices-Advertising - Reg. N",
+    "value": 121,
+    "checked":false,
+    "id": 20
+  }, {
+    "name": "Mortgage Assistance Relief Services - Reg. O",
+    "value": 122,
+    "checked":false,
+    "id": 21
+  }, {
+    "name": "Privacy of Consumer Financial Information – Reg. P",
+    "value": 123,
+    "checked":false,
+    "id": 22
+  }, {
+    "name": "Purchasers’ Revocation Rights, Sales Practices and Standards - Reg. K",
+    "value": 124,
+    "checked":false,
+    "id": 23
+  }, {
+    "name": "Real Estate Settlement Procedures Act (RESPA) - Reg. X",
+    "value": 125,
+    "checked":false,
+    "id": 24
+  }, {
+    "name": "Reserve Requirements of Depository Institutions - Reg. D",
+    "value": 126,
+    "checked":false,
+    "id": 25
+  }, {
+    "name": "S.A.F.E. Mortgage Licensing Act",
+    "value": 127,
+    "checked":false,
+    "id": 26
+  }, {
+    "name": "Servicemembers Civil Relief Act (SCRA",
+    "value": 128,
+    "checked":false,
+    "id": 27
+  }, {
+    "name": "Telephone Consumer Protection Act (TCPA)",
+    "value": 129,
+    "checked":false,
+    "id": 28
+  }, {
+    "name": " Truth in Lending Act (TILA) – Reg. Z",
+    "value": 130,
+    "checked":false,
+    "id": 29
+  }, {
+    "name": " Truth in Savings Act – Reg. DD",
+    "value": 131,
+    "checked":false,
+    "id": 30
+  }, {
+    "name": " Unfair or Deceptive Acts or Practices (UDAP)",
+    "value": 132,
+    "checked":false,
+    "id": 31
+  }, {
+    "name": " Unfair, Deceptive or Abusive Acts or Practices (UDAAP)",
+    "value": 133,
+    "checked":false,
+    "id": 32
+  }, {
+    "name": "Uniform Commercial Code (UCC) Article 4A",
+    "value": 134,
+    "checked":false,
+    "id": 33
+  }, {
+    "name": "Truth in Lending Act (TILA) – Reg. Z",
+    "value": 135,
+    "checked":false,
+    "id": 34
+  }, {
+    "name": "Fair Lending-Age",
+    "value": 136,
+    "checked":false,
+    "id": 35
+  }, {
+    "name": "Fair Lending-Disability/Handicap",
+    "value": 137,
+    "checked":false,
+    "id": 36
+  }, {
+    "name": "Fair Lending-Gender or Gender Identity",
+    "value": 138,
+    "checked":false,
+    "id": 37
+  }, {
+    "name": "Fair Lending-Income from public assistance",
+    "value": 139,
+    "checked":false,
+    "id": 38
+  }, {
+    "name": "Fair Lending-Marital or Familial status",
+    "value": 140,
+    "checked":false,
+    "id": 39
+  }, {
+    "name": "Fair Lending-National Origin",
+    "value": 141,
+    "checked":false,
+    "id": 40
+  }, {
+    "name": "Fair Lending-Other (State or local prohibited basis)",
+    "value": 142,
+    "checked":false,
+    "id": 41
+  }, {
+    "name": "Fair Lending-Race/Ethnicity",
+    "value": 143,
+    "checked":false,
+    "id": 42
+  }, {
+    "name": "Fair Lending-Religion",
+    "value": 144,
+    "checked":false,
+    "id": 43
+  }, {
+    "name": "Fair Lending-Sexual Orientation",
+    "value": 145,
+    "checked":false,
+    "id": 44
+  }, {
+    "name": "Fair Lending-Military Status",
+    "value": 146,
+    "checked":false,
+    "id": 45
+  }, {
+    "name": "Fair Lending-Exercised rights under consumer protection law",
+    "value": 147,
+    "checked":false,
+    "id": 46
+
+  }, {
+    "name": "Fair Lending and Servicing-Age",
+    "value": 148,
+    "checked":false,
+    "id": 47
+  }, {
+    "name": "Fair Lending and Servicing-Color",
+    "value": 149,
+    "checked":false,
+    "id": 48
+  }, {
+    "name": "Fair Lending and Servicing-Disability/Handicap",
+    "value": 150,
+    "checked":false,
+    "id": 49
+  }, {
+    "name": "Fair Lending and Servicing-Gender or Gender Identity",
+    "value": 151,
+    "checked":false,
+    "id": 50
+  }, {
+    "name": "Fair Lending and Servicing-Income from public assistance",
+    "value": 152,
+    "checked":false,
+    "id": 51
+  }, {
+    "name": "Fair Lending and Servicing-Marital or Familial status",
+    "value": 153,
+    "checked":false,
+    "id": 52
+
+  }, {
+    "name": "Fair Lending and Servicing-National Origin",
+    "value": 154,
+    "checked":false,
+    "id": 53
+  }, {
+    "name": "Fair Lending and Servicing-Other",
+    "value": 155,
+    "checked":false,
+    "id": 54
+  }, {
+    "name": "(State or local prohibited basis)",
+    "value": 156,
+    "checked":false,
+    "id": 55
+  }, {
+    "name": "Fair Lending and Servicing-Race/Ethnicity",
+    "value": 157,
+    "checked":false,
+    "id": 56
+  }, {
+    "name": "Fair Lending and Servicing-Religion",
+    "value": 158,
+    "checked":false,
+    "id": 57
+  }, {
+    "name": "Fair Lending and Servicing-Sexual Orientation",
+    "value": 159,
+    "checked":false,
+    "id": 58
+  }, {
+    "name": "Fair Lending and Servicing-Military Status",
+    "value": 160,
+    "checked":false,
+    "id": 59
+  }, {
+    "name": "Fair Lending and Servicing-Exercised rights under consumer protection law",
+    "value": 161,
+    "checked":false,
+    "id": 60
+  }, {
+    "name": "Responsible Servicing-Inadequate or Inappropriate Default or Complaint Resolution",
+    "value": 162,
+    "checked":false,
+    "id": 61
+  }, {
+    "name": "Responsible Servicing-Inappropriate Foreclosure",
+    "value": 163,
+    "checked":false,
+    "id": 62
+  }, {
+    "name": "Responsible Servicing-Inappropriate Debt Collection",
+    "value": 164,
+    "checked":false,
+    "id": 63
+  }, {
+    "name": "Responsible Servicing-Military Protections ",
+    "value": 165,
+    "checked":false,
+    "id": 64
+
+  }, {
+    "name": "(rate or foreclosure)",
+    "value": 166,
+    "checked":false,
+    "id": 65
+  }, {
+    "name": "Responsible Servicing or Loss Mitigation-Ability to Repay",
+    "value": 167,
+    "checked":false,
+    "id": 66
+  }, {
+    "name": "Responsible Servicing or Loss Mitigation-Inadequate or incomplete info: Financing Options/Loan Terms/Features",
+    "value": 168,
+    "checked":false,
+    "id": 67
+  }, {
+    "name": "Responsible Servicing or Loss Mitigation-Product Pricing (Rate or Fee)",
+    "value": 169,
+    "checked":false,
+    "id": 68
+  }, {
+    "name": "Responsible Lending-Ability to Repay",
+    "value": 170,
+    "checked":false,
+    "id": 69
+  }, {
+    "name": "Responsible Lending-Misleading Sales Practices",
+    "value": 171,
+    "checked":false,
+    "id": 70
+  }, {
+    "name": "Responsible Lending-Inadequate/Incomplete Information",
+    "value": 172,
+    "checked":false,
+    "id": 71
+  }, {
+    "name": "Responsible Lending-No Benefit to Borrower",
+    "value": 173,
+    "checked":false,
+    "id": 72
+  }, {
+    "name": "Responsible Lending-Product Pricing (Rate or Fee)",
+    "value": 175,
+    "checked":false,
+    "id": 74
+  }, {
+    "name": "Responsible Lending-Product Steering",
+    "value": 176,
+    "checked":false,
+    "id": 75
+  }, {
+    "name": "Responsible Lending-Deceptive Marketing, Promotion or Advertising",
+    "value": 177,
+    "checked":false,
+    "id": 76
+  }
+
+  ]
+
+}

@@ -1,0 +1,213 @@
+
+
+/*********** START: GLOBAL *********************/
+body {
+	line-height: 1.4;
+    /* background-color: #EAEFF8; */ /* -- modification */
+    color: #424242;
+    /*font-family: arial;*/ /* -- modification */
+    /*margin: 0;*/ /* -- modification */
+	
+	margin: 0;
+    background-color: #EAEFF8;
+    font-size: 12px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+}
+strong {
+    font-weight: bold;
+}
+p {
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+.container-page {
+    margin: 0 auto 10px auto;
+    width: 991px;
+    border-width: 0 2px 2px;
+    border-style: solid;
+    border-color: #CED4DD;
+    background-color: #FFF;
+}
+.content-wrapper p {
+    font-size: 12px;
+}
+/*a,
+a:link,
+a:visited {
+    color: #369
+}
+a:hover {
+    color: #4986ff
+}
+*//*DELETE THIS LATER*/
+a:link,
+a:visited {
+    color: #587DC9;
+    text-decoration: underline
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    
+    display: table;
+    /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.cf {
+    *zoom: 1;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+/*.ui-hidden-accessible {
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+ul,ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.list-inline>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+h2 {
+    font-weight: bold;
+    font-size: 13px;
+}
+*/
+h1 {
+    /*color: #6b6355;*/
+    color: #44464a;
+    margin: 0;
+    font-weight: normal;
+    margin: 0 0 8px 0;
+}
+.body-content {margin: 20px 8px 0 8px;}
+.content-wrapper h1 {font-size: 21px;}
+.content-wrapper h2 {font-size: 13px;}
+.content-wrapper {    
+    float: left;
+    padding: 0 0 0 0px;
+    width: 100%;
+}
+.content {
+    padding: 0px 0 10px 30px;
+}
+/*********** END: GLOBAL *********************/
+/*********** START: HEADER *******************/
+.header {
+    border-top: 5px solid #f2f1ec;
+    float: none;
+    height: 70px;
+    margin: 0 8px 10px 8px;
+    padding: 0;
+    vertical-align: top;
+    /*    width: 975px;*/
+    
+    border-bottom: 1px solid #ccc;
+}
+.logo {
+    float: left;
+    height: 62px;
+    margin: 0;
+    padding: 0;
+    width: auto
+}
+.utility {
+    color: #b2b299;
+    float: right;
+    margin: 5px 15px 0 0;
+    padding: 0;
+    width: auto;
+}
+.security-lnk {
+    background: url('../img/icn_lock_16x16.gif') no-repeat;
+    padding-left: 17px;
+    font-weight: bold;
+}
+
+#skip-to-content {
+} 
+#masthead a:link,
+#masthead a:visited {
+    color: #369;
+    text-decoration: none;
+}
+#masthead a:hover,
+#masthead a:active {
+    color: #002cda;
+    text-decoration: underline;
+}
+
+a.sign-on,
+a.sign-off {
+    font-weight: bold;
+    border-right: 1px solid #b2b299;
+    padding-right: 5px;
+}
+/*********** END: HEADER *********************/
+
+/*********** START: FOOTER *********************/
+.footer {
+    margin: 0 8px 20px 8px;
+    text-align: center;
+    border-top: 1px solid #CCC;
+    font-size: 12px;
+    padding: 10px 0 0 0;
+    color: #666;
+}
+.footer * {
+    font-size: 11px;
+}
+.footer a {
+    text-decoration: none;
+}
+.pdf-disclaimer {
+    padding: 10px;
+    font-size: 11px;
+}
+.pdf-disclaimer * {
+    font-size: 11px;
+}
+.equal-housing {
+    text-align: center;
+    margin: 10px 0;
+}
+.equal-housing strong {
+    color: #000
+}
+/*********** END: FOOTER *********************/
+
+/*********** START: PAGE *********************/
+input[type="text"],input[type="date"],label{
+	display:block;
+	margin: 0 0 5px 0;
+}
+/*********** END: PAGE *********************/
+
+/*********** START: space for pradeep *********************/
+
+
+/*********** END: space for pradeep  *********************/

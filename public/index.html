@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Third Party Complaint</title>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/ui-lightness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.selectboxit/3.3.0/jquery.selectBoxIt.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <link rel="stylesheet" type="text/css" href="css/thirdPartyComplaint.css">
+        <!--<link rel="stylesheet" href="css/reset.css">-->
+        <!--<link rel="stylesheet" href="css/main-style.css">-->
+        <!--<link rel="stylesheet" href="vendor/Jasmine/lib/jasmine-2.4.1/jasmine.css">-->
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+        <script type="text/javascript" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+        <script type="text/javascript" src="js/landingPageController.js"></script>
+        <script type="text/javascript" src="js/complaintFormController.js"></script>
+        <script type="text/javascript" src="js/tpc.js"></script>
+    </head>
+
+    <body ng-app="ComplaintForm">
+    <div class="container-page container" id="main-page">
+        <div id="masthead" class="header cf row" role="banner">
+            <div class="logo col-md-3 col-sm-5 col-xs-7 "><a href="#" id="wellFargoLogoLnk"><img src="https://www01.wellsfargomedia.com/assets/images/global/wf-logo.gif" alt="Wells Fargo Home Page" /></a>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-4 pull-right">
+                <a class="complaint-form-sign-off js-nav-away-link pull-right" id="signOffHeaderLnk" href="#">Sign Off</a>
+            </div>
+        </div>
+        <div ng-view>
+        </div>
+
+        <div class="footer" role="contentinfo">
+
+            <p class="copy">&copy; 1999-<script type="text/javaScript">
+                //<![CDATA[ today=new Date(); year0=today.getFullYear(); document.write(year0); //]]></script>2016 Wells Fargo. All rights reserved.</p>
+            </script></div>
+            </div>
+
+    </body>
+</html>

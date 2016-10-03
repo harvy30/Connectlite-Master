@@ -1,0 +1,162 @@
+<!--<div class="container-page container" id="main-page">-->
+	<!--<div id="masthead" class="header cf row" role="banner">-->
+		<!--<div class="logo col-md-3 col-sm-5 col-xs-7 "><a href="#" id="wellFargoLogoLnk"><img src="https://www01.wellsfargomedia.com/assets/images/global/wf-logo.gif" alt="Wells Fargo Home Page" /></a>-->
+	<!--</div>-->
+	<!--<div class="col-md-2 col-sm-2 col-xs-4 pull-right">-->
+		<!--<a class="complaint-form-sign-off js-nav-away-link pull-right" id="signOffHeaderLnk" href="#">Sign Off</a>-->
+	<!--</div>-->
+<!--</div>-->
+<!-- Main Page -->
+<div class="cf body-content" >
+	<h1 id="skip-to-content">TPSP Resolved service</h1>
+	<p class="optional-indicator pull-left">All fields required unless indicated as optional</p> <br />
+	
+	<section class="content-wrapper" role="main">
+		<form novalidate class="content" name="complaintFormthirdParty" ng-submit="vm.previewForm()">
+			<div class="row">
+				<p>
+					<label for="dateReceivedByWellsFargo">Date Complaint Received (mm/dd/yyyy)</label>
+					<!-- <input type="date" class="hasDatepicker" name="errorEmpty" ng-class="{errorEmpty:submitted && complaintFormthirdParty.errorEmpty.$invalid}" ng-model="errorEmpty" required/> -->
+					<md-content class="datepicker-wrapper" ng-class="{errorEmpty:(submitted && complaintFormthirdParty.receivedDate.$invalid)  || recievedDateerror}">
+					<md-datepicker ng-model="receivedDate" md-placeholder="Enter date"
+					md-min-date="minDate" md-max-date="maxDate" ng-blur="receive()" required="required">
+					</md-datepicker>
+					</md-content>
+				</p>
+			</div>
+			
+			<div class="row">
+				<p>
+					<label for="complaintType">Complainant Type</label>
+					<select name="complaintType" ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintType.$invalid}" ng-model="complaintType" required="required">
+						<option value="">Select one</option>
+						<option value="#">Customer-Consumer</option>
+						<option value="#">Customer - Active Duty Military Service Member or Dependent</option>Z<option value="#" >Customer - Business or Commercial</option>
+						<option value="#">Authorized Third Party</option>
+						<option value="#">Non-Wells Fargo Customer</option>
+					</select>
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="sourceCategory">Source category</label>
+					<select ng-options="sourceCat for (sourceCat, complaintSource) in sourceCategory" ng-model="sourceCat" name="sourceCat" ng-change="vm.sourceCategory(sourceCat)" ng-class="{errorEmpty:submitted && complaintFormthirdParty.sourceCat.$invalid}" required="required">
+						<option value="">Select one</option>
+					</select>
+				</p>
+				<p class="col-md-4 col-sm-4">
+					<label for="complaintSource">Source</label>
+					<select id="state" name="complaintSrc" ng-model="complaintSrc" ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintSrc.$invalid}"
+						ng-options="complaintSrc for complaintSrc in sourceCat" required="required">
+						<option value="">Select one</option>
+					</select>
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="accountNumber">Account number&nbsp;<span class="optionalIndicator">(optional)</span></label>
+					<input type="text" class="col-md-12 col-sm-12" value="" minlength="1" maxlength="23" ng-pattern='/^[0-9 -]*$/'  name="accountNum"  ng-class="{errorEmpty:submitted
+					&& complaintFormthirdParty.accountNum.$invalid}" ng-model="accountNum"/>
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="productCategory">Product category</label>
+					<select name="productCategory" ng-options="productCat for (productCat, complaintSource) in productCategory" ng-model="productCat" ng-change="vm.productCategory(productCat)" ng-class="{errorEmpty:submitted && complaintFormthirdParty.productCategory.$invalid}" required="required">
+						<option value="">Select one</option>
+						
+					</select>
+				</p class="col-md-4 col-sm-4">
+				<p>
+					<label for="product">Product&nbsp;<span class="optionalIndicator">(optional)</span></label>
+					<select name="product" ng-model="product" ng-class="{errorEmpty:submitted && complaintFormthirdParty.product.$invalid}"
+						ng-options="product for product in productCat">
+						<option value="">Select one</option>
+						
+					</select>
+				</p>
+			</div>
+			
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="primaryComplaintReasonCategory">Primary Complaint Reason Category</label>
+					<select name="primaryComplaintReasonCategory" ng-options="primaryComplaintReasonCat for (primaryComplaintReasonCat, complaintSource) in primaryComplaintReasonCategory" ng-model="primaryComplaintReasonCat" ng-change="vm.primaryComplaintCategory(primaryComplaintReasonCat)" ng-class="{errorEmpty:submitted && complaintFormthirdParty.primaryComplaintReasonCategory.$invalid}" required="required">
+						<option value="">Select one</option>
+					</select>
+				</p>
+				<p class="col-md-4 col-sm-4">
+					<label for="primaryComplaintReason">Primary Complaint Reason</label>
+					<select name="primaryComplaintReason" ng-model="primaryComplaintReason" ng-class="{errorEmpty:submitted && complaintFormthirdParty.primaryComplaintReason.$invalid}" ng-options="primaryComplaintReason for primaryComplaintReason in primaryComplaintReasonCat" required="required">
+						<option value="">Select one</option>
+					</select>
+				</p>
+			</div>
+			
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="resolution">Resolution</label>
+					<select name="resolution" ng-model="resolution" ng-class="{errorEmpty:submitted && complaintFormthirdParty.resolution.$invalid}" required="required">
+						<option value="">Select one</option>
+						<option value="#">Closed with monetray relief</option>
+						<option value="#">Closed with non-monetary relief</option>
+						<option value="#">Closed with explanation</option>
+						<option value="#">Closed</option>
+						<option value="#">Alerted CFPB</option>
+					</select>
+				</p>
+				<p class="col-md-4 col-sm-4">
+					<label for="monetaryRelief">Monetary Relief&nbsp;<span class="optionalIndicator">(optional)</span></label>
+					<input type="text" value=""  class="col-md-12 col-sm-12" name="monetaryRelief" minlength="1" maxlength="10"  ng-pattern='/^\$?[0-9]{1,3}(,?[0-9]{3})*(([\\.,]{1}[0-9]*)|())$/' ng-model="monetaryRelief" ng-class="{errorEmpty:submitted && complaintFormthirdParty.monetaryRelief.$invalid}">
+				</p>
+			</div>
+			
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="noteSummary">Note - Summary</label>
+					<textarea ng-model="complaintFormSummary" name="complaintFormSummary"  ng-pattern='/^[A-Za-z ]*$/' class="col-md-12 col-sm-12" ng-trim="false" maxlength="1000" ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintFormSummary.$invalid}" required="required"></textarea>
+					<span class="char-limit">(Max Characters:1000)&nbsp;You have {{1000 - complaintFormSummary.length}} characters left</span>
+				</p>
+				<p class="col-md-4 col-sm-4">
+					<label for="noteResolution">Note - Resolution</label>
+					<textarea ng-model="complaintFormResoultion" name="complaintFormResoultion"  ng-pattern='/^[A-Za-z ]*$/' class="col-md-12 col-sm-12" ng-trim="false" maxlength="1000" ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintFormResoultion.$invalid}" required="required"></textarea>
+					<span class="char-limit">(Max Characters:1000)&nbsp;You have {{1000 - complaintFormResoultion.length}} characters left</span>
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="TPSPaccountNumber">TPSP's Account number&nbsp;<span class="optionalIndicator">(optional)</span></label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="TpspAccountNum" minlength="1" maxlength="23" ng-pattern='/^[A-Za-z ]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.TpspAccountNum.$invalid}" ng-model="TpspAccountNum"/>
+				</p>
+			</div>
+			<div class="row">
+				<p>
+					<input type="checkbox" class="pull-left" name="cmptAbtVen" ng-model="cmptAbtVen" ng-class="{errorChkBox:submitted && complaintFormthirdParty.cmptAbtVen.$invalid}" required="required" /><label> &nbsp;is the complaint about this vendor</label>
+				</p>
+			</div>
+			
+			<div class="row">
+				<p>
+					<input type="checkbox" class="pull-left" name="cmptAbtDisc" ng-model="cmptAbtDisc" ng-class="{errorChkBox:submitted && complaintFormthirdParty.cmptAbtDisc.$invalid}" required="required" />
+					<label> &nbsp; is the complaint about discrimination</label>
+				</p>
+			</div>
+			<div class="row">
+				<div class="pull-right">
+					<button type="button" class="start-btn" value="reset" ng-click="vm.resetForm()">Start Over</button>
+					<button type="submit" class="preview-btn" value="save">Preview</button>
+				</div>
+				<div class="uploaded-fileInfo col-md-9 pull-left"></div>
+				<a href="">Upload supporting documents</a>
+			</div>
+		</form>
+	</section>
+	
+</div>
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<div class="footer" role="contentinfo">-->
+	<!---->
+	<!--<p class="copy">&copy; 1999-<script type="text/javaScript">-->
+	<!--//<![CDATA[ today=new Date(); year0=today.getFullYear(); document.write(year0); //]]></script>2016 Wells Fargo. All rights reserved.</p>-->
+	<!--</script>-->
+<!--</div>-->
+<!--</div>-->

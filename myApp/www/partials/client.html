@@ -1,0 +1,32 @@
+
+<ion-modal-view>
+  <ion-header-bar class="modalHead">
+    <a class="ion-android-close" ng-click="closeModal()"></a>
+    <div class="bar bar-header bar-positive title text-center"><h3 class="text-center">Your Clients</h3></div> 
+  </ion-header-bar>
+  <ion-content>
+    <div data-ng-if="(bpc.bankCustomers)">
+      <div data-ng-show="(bpc.bankCustomers && bpc.bankCustomers.length>=1)">
+
+            <div class="row header" >
+              <div class="col col-25 text-center">Name</div>
+              <div class="col col-55 address text-center">Address</div>
+              <div class="col col-20 text-center">ECI</div>         
+            </div>
+
+            <div class="row contentrows" data-ng-repeat="customer in (bpc.bankCustomers) track by $index">
+              <div class="col col-25 "> <a data-ui-sref="customer({id:customer.enterpriseCustomerProspect.enterpriseCustomer.enterpriseID.value})" style="text-decoration: none;" ng-click="closeModal();" >{{ bpc.getCustomerFullName(customer.enterpriseCustomerProspect.enterpriseCustomer.enterpriseIndNonIndInfo.enterpriseIndInfo.indName) }}</a></div>
+              <div class="col col-55 address">{{ bpc.getCustomerAddress(customer.enterpriseCustomerProspect.enterpriseCustomer.address) }}</div>
+
+              <div class="col col-20 text-center">{{ customer.enterpriseCustomerProspect.enterpriseCustomer.enterpriseID.value }}</div>
+            </div>
+    <ion-infinite-scroll data-ng-if="!bpc.completedLoading" on-infinite="addItems()" immediate-check="false" distance="1%"></ion-infinite-scroll>
+    <div class='item item-divider text-center itemcompleted' data-ng-show='bpc.completedLoading' ng-bind="bpc.completedLoadingMsg"></div>
+    </div>
+    <div class="row" data-ng-show="(bpc.completedLoading && 0 != bpc.bankCustomers.length)">
+      <div class="col col-30 text-center noClients">No Matching Clients Found</div>
+     </div>
+    </div>
+  </ion-content>
+</ion-modal-view>
+

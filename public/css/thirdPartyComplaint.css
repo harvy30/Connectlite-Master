@@ -1,0 +1,276 @@
+body {
+position: relative;
+margin: 0;
+padding: 0;
+font-family: Verdana, Arial, Sans-Serif;
+font-size: 16px;
+background-color: #fff;
+color: #434343;
+}
+.container-page {
+margin: 0 auto 10px auto;
+border-width: 0 2px 2px;
+border-style: solid;
+border-color: #CED4DD;
+background-color: #FFF;
+}
+.row {
+margin: 4px;
+}
+#masthead {
+margin: 34px 0 34px 0;
+border-bottom-color: #dfdfdf;
+border-bottom-style: solid;
+padding-bottom: 16px;
+}
+div, table, td, th {
+padding: 0;
+}
+#mainNav {
+position: relative;
+height: 110px;
+margin: 0 auto;
+padding: 0;
+display: block;
+}
+#brand {
+position: absolute;
+top: 32px;
+left: 0;
+}
+#mainNav a {
+text-decoration: none;
+}
+body a {
+color: #5174b8;
+}
+#headerTools {
+position: absolute;
+top: 77px;
+right: 0;
+bottom: 16px;
+}
+nav ul{
+list-style: none;
+list-style-image: none;
+padding: 0 0 0 10px;
+margin: 0 0 20px 10px;
+}
+ul {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+#headerTools li {
+list-style-type: none;
+display: inline;
+font-weight: bold;
+padding: 0 5px;
+margin: 0 auto .5em auto;
+line-height: 1.4em;
+text-align: -webkit-match-parent;
+}
+#masthead a:visited {
+text-decoration: underline;
+color: #587DC9;
+}
+ul li a:visited, #headerTools a:visited {
+color: #666;
+}
+#headerTools li a {
+font-weight: normal;
+margin-left: 15px;
+font-size: 100%;
+}
+.complaintForm {
+margin: 0 auto;
+}
+.formHeader {
+font-size: 100%;
+color: #434343;
+border-bottom: 1px solid #d5d5d5;
+}
+.content-wrapper label {
+font-size: 75%;
+color: #434343;
+display: block !important;
+margin-top: 8px;
+}
+.content-wrapper select {
+width: 210px;
+font-size: 75%;
+}
+.complaint-form-sign-off {
+border-right: none;
+color: #369;
+text-decoration: none;
+font-weight: bold;
+margin-top: 40px;
+}
+.content-wrapper textarea {
+height: 78px;
+}
+/*landing page cusotm CSS*/
+.content-wrapper .landing-headline {
+color: #EC1C29;
+font-size: 75%;
+}
+.content-wrapper .landing-eng {
+margin-top: 45px;
+font-weight: 700;
+font-size: 75%;
+}
+.content-wrapper .selected-forms {
+float: left;
+margin-right: 8px;
+}
+.content-wrapper button {
+float: right;
+cursor: pointer;
+}
+.upload-file {
+margin: 45px 0 45px 0;
+height: 78px;
+}
+.content-wrapper .upload-doc {
+display: none;
+}
+.content-wrapper .upload-link {
+text-decoration: none;
+}
+.footer {
+margin: 8px 0 20px 0;
+text-align: center;
+border-top: 1px solid #CCC;
+font-size: 12px;
+padding: 10px 0 0 0;
+color: #666;
+}
+.footer p {
+margin: 10px;
+}
+.continue-btn {
+width: 120px;
+height: 40px;
+font-weight: bold;
+color: #000;
+background: #d9d9d6;
+font-size: 75%;
+float: right;
+margin-top: 18px;
+}
+/*form complaint page css starts*/
+.content-wrapper{
+margin-top: 34px;
+}
+.content-wrapper p label a {
+font-size: 70%;
+}
+.optional-indicator {
+font-size: 60%;
+}
+.content-wrapper .char-limit {
+font-size: 60%;
+}
+.content-wrapper p {
+padding-left: 0 !important;
+}
+.content-wrapper input {
+margin: 2px 0 0 0 !important;
+}
+.values-regulation-link {
+font-size: 70%;
+}
+.complaint-form-modal, input[type=checkbox], input[type=radio] {
+margin: 7px 8px 0 0;
+}
+.start-btn, .preview-btn {
+width: 120px;
+height: 40px;
+font-weight: bold;
+background: #d9d9d6;
+font-size: 75%;
+color: #000;
+float: right;
+margin: 18px 0 0 8px;
+}
+input .ng-valid {
+border: 1px solid #bb0826;
+}
+body.modal-open {
+overflow: visible;
+}
+.complaint-form-modal {
+margin: 0 auto;
+}
+.complaint-form-modal .modal-body {
+max-height: calc(100vh - 210px);
+overflow-y: auto;
+}
+.complaint-form-modal span {
+font-size:75%;
+font-weight: normal;
+}
+/*datepicker css*/
+md-content {
+height: 32px;
+width: 210px;
+border: 1px solid #aaa;
+}
+.datepickerdemoBasicUsage .validation-messages {
+font-size: 11px;
+color: darkred;
+margin: 10px 0 0 25px;
+}
+.md-datepicker-triangle-button.md-button.md-icon-button {
+display: none;
+}
+.md-datepicker-input-container {
+border-bottom: none;
+}
+.md-datepicker-calendar-pane.md-pane-open {
+top: 326px;
+}
+.md-datepicker-input-mask {
+display: none;
+}
+.md-datepicker-input {
+font-size: 75%;
+}
+.acknowledgementDate-datepicker .md-pane-open {
+top: 384px;
+}
+.md-button.md-icon-button {
+height: 24px;
+margin: 0;
+padding: 0;
+width: 24px;
+}
+.md-button {
+min-height: 28px;
+}
+.errorEmpty {
+border:1px solid #bb0826;
+}
+.errorChkBox{
+outline: 1px solid #bb0826;
+}
+.uploaded-fileInfo {
+margin-top: 40px;
+}
+.discriminationAllegation span {
+font-size: 75%;
+font-weight: normal;
+margin: 0 16px 0 0;
+padding-left: 4px;
+vertical-align: 2px;
+}
+.optionalIndicator {
+font-weight: normal;
+}
+@media screen and (max-width: 780px) {
+.summary-note {width: 230px; clear: both;}		
+}

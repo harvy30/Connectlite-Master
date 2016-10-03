@@ -1,0 +1,431 @@
+<div class="modal-header">
+	
+</div>
+<div class="modal-body">
+	<div ng-repeat="popup_values in selectValues">
+		<input type="checkbox" class="pull-left"  id="{{popup_values.id}}" ng-model="popup_values.checked" ng-change="selectedValue(selected,popup_values)">
+		<p>{{popup_values.name}}</p>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="start-btn" ng-click="ok()">OK</button>
+	<button class="preview-btn" ng-click="cancel()">Cancel</button>
+</div>
+		<!---->
+	<!--<div>-->
+		<!--<input type="checkbox" class="pull-left"/>-->
+		<!--<span id="second-element"> Americans with Disabilities Act (ADA)</span>-->
+	<!--</div>-->
+		<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="third-element">Anti-Money Laundering (AML)/Bank Secrecy Act (BSA)</span>-->
+	<!--</div>-->
+
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourth-element">Appraisal/Evaluation Guidelines</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifth-element">CAN SPAM Act</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="sixth-element">Checks and Transfers - Reg. J (12 CFR Part 210)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="seventh-element">Consumer Leasing Act - Reg. M</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="eight-element">Debt Cancellation && Suspension Agreements</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="nine-element">Elder Abuse (State Laws)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="ten-element">Electronic Funds Transfer (EFT) Act - Reg. E</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="eleven-element">Equal Credit Opportunity Act (ECOA) - Reg. B</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="tweleve-element">E-Sign Act</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirteen-element">Expedited Funds Availability Act - Reg. CC</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourteen-element">Fair Credit Reporting Act (FCRA) - Reg. V</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifteen-element">Fair Debt Collection Practices Act - Reg. F</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="sixteen-element">Fair Housing Act</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="seventeen-element">Federal Family Education Loan Program (FFELP)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="eighteen-element">Flood Insurance Act</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="nineteen-element">Fair Lending-Age</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-element">Fair Lending-Color</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-one-element">Fair Lending-Disability/Handicap</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-two-element">Fair Lending-Gender or Gender Identity</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-three-element">Fair Lending-Income from public assistance</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-four-element">Fair Lending-Marital or Familial status</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-five-element">Fair Lending-National Origin</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-six-element">Fair Lending-Other (State or local prohibited basis)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-seven-element">Fair Lending-Race/Ethnicity</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-eight-element">Fair Lending-Religion</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="twenty-nine-element">Fair Lending-Sexual Orientation</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-element">Fair Lending-Military Status</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-one-element">Fair Lending-Exercised rights under consumer protection law</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-two-element">Fair Lending and Servicing-Age</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-three-element">Fair Lending and Servicing-Color</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-four-element">Fair Lending and Servicing-Disability/Handicap</span>-->
+	<!--</div>-->
+			
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-five-element">Fair Lending and Servicing-Gender or Gender Identity</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-six-element">Fair Lending and Servicing-Income from public assistance</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-seven-element">Fair Lending and Servicing-Marital or Familial status</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-eight-element">Fair Lending and Servicing-National Origin</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="thirty-nine-element">Fair Lending and Servicing-Other (State or local prohibited basis)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-element">Fair Lending and Servicing-Race/Ethnicity</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-one-element">Fair Lending and Servicing-Religion</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-two-element">Fair Lending and Servicing-Sexual Orientation</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-three-element">Fair Lending and Servicing-Military Status</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-four-element">Fair Lending and Servicing-Exercised rights under consumer protection law</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-five-element">Home Mortgage Disclosure Act (HMDA) - Reg. C</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-six-element">Home Owners Protection Act</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-seven-element">Home Ownership and Equal Protection Act (HOEPA)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-eight-element">Land Registration - Reg. J (12 CFR Parts 1010, 1011, and 1012)</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fourty-nine-element">Mortgage Acts and Practices-Advertising - Reg. N</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifty-element">Mortgage Assistance Relief Services - Reg. O</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifty-one-element">Privacy of Consumer Financial Inidmation - Reg. P</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox"/>-->
+	<!--<span id="fifty-two-element">Purchasers' Revocation Rights, Sales Practices and Standards - Reg. K</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifty-three-element">Real Estate Settlement Procedures Act (RESPA) - Reg. X</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifty-four-element">Reserve Requirements of Depository Institutions - Reg. D</span>-->
+	<!--</div>-->
+			<!---->
+	<!--<div>-->
+	<!--<input type="checkbox" class="pull-left"/>-->
+	<!--<span id="fifty-five-element">Responsible Servicing-Inadequate or Inappropriate Default or Complaint </span>-->
+	<!--</div>-->
+			
+	<!-- <div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="fifty-six-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="fifty-seven-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="fifty-eight-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="fifty-nine-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-one-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-two-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-three-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-four-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-five-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-six-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-seven-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-eight-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="sixty-nine-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-one-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-two-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-three-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-four-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-five-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-six-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-seven-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="seventy-eight-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="-element"></span>
+	</div>
+			
+	<div>
+	<input type="checkbox" class="pull-left"/>
+	<span id="-element"></span>
+	</div>
+	 -->
+		
+

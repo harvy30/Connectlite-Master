@@ -1,0 +1,135 @@
+{
+	"EnterpriseCustomer" : [
+		{
+			"EnterpriseID" : "0059391509",
+			"IndividualBusinessCode" : "I",
+			"CustomerSubType" :
+			{
+				"Code" : "999"
+			},
+			"SSNTIN" : "507267194",
+			"EnterpriseIndNonIndInfo" :
+			{
+				"EnterpriseIndInfo" :
+				{
+					"IndName" :
+					{
+						"FirstName" : "KARENA",
+						"LastName" : "HAIRELL"
+					}
+				}
+			},
+			"Address" :
+			{
+				"AddressLine1" : "4301 OAKVIEW CIR",
+				"City" : "ALPINE",
+				"State" :
+				{
+					"Code" : "UT"
+				},
+				"PostalArea" : "840040000",
+				"Country" : "United States/US territories"
+			},
+			"Email":"MASKED.EMAIL2@JPMCHASE.COM"
+		},
+		{
+			"EnterpriseID" : "0263322565",
+			"IndividualBusinessCode" : "I",
+			"CustomerSubType" :
+			{
+				"Code" : "999"
+			},
+			"SSNTIN" : "528350619",
+			"EnterpriseIndNonIndInfo" :
+			{
+				"EnterpriseIndInfo" :
+				{
+					"IndName" :
+					{
+						"FirstName" : "KARENA1",
+						"LastName" : "HAIRELL1"
+					}
+				}
+			},
+			"Address" :
+			{
+				"AddressLine1" : "375 CRIMSON CIR APT 11R",
+				"City" : "SALT LAKE CITY",
+				"State" :
+				{
+					"Code" : "UT"
+				},
+				"PostalArea" : "840040000",
+				"Country" : "United States/US territories"
+			},
+			"Email":"MASKED.EMAIL2@JPMCHASE.COM"
+		},
+		{
+			
+			"EnterpriseID" : "0059391509",
+			"IndividualBusinessCode" : "I",
+			"CustomerSubType" :
+			{
+				"Code" : "999"
+			},
+			"SSNTIN" : "507267194",
+			"EnterpriseIndNonIndInfo" :
+			{
+				"EnterpriseIndInfo" :
+				{
+					"IndName" :
+					{
+						"FirstName" : "KARENA",
+						"LastName" : "HAIRELL"
+					}
+				}
+			},
+			"Address" :
+			{
+				"AddressLine1" : "4301 OAKVIEW CIR",
+				"City" : "ALPINE",
+				"State" :
+				{
+					"Code" : "UT"
+				},
+				"PostalArea" : "840040000",
+				"Country" : "United States/US territories"
+			},
+			"Email":"MASKED.EMAIL2@JPMCHASE.COM"
+		},
+		{
+			
+			"EnterpriseID" : "0263391242",
+			"IndividualBusinessCode" : "I",
+			"CustomerSubType" :
+			{
+				"Code" : "999"
+			},
+			"SSNTIN" : "507267194",
+			"EnterpriseIndNonIndInfo" :
+			{
+				"EnterpriseIndInfo" :
+				{
+					"IndName" :
+					{
+						"FirstName" : "KARENA3",
+						"LastName" : "HAIRELL3"
+					}
+				}
+			},
+			"Address" :
+			{
+				"AddressLine1" : "4301 OAKVIEW CIR",
+				"City" : "ALPINE",
+				"State" :
+				{
+					"Code" : "UT"
+				},
+				"PostalArea" : "840040000",
+				"Country" : "United States/US territories"
+			},
+			"Email":"MASKED.EMAIL2@JPMCHASE.COM"
+		}
+		
+	]
+}

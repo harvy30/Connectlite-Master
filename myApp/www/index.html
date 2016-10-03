@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html data-ng-app="starter">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Connect Lite Application</title>
+
+	<link href="css/ionicons.min.css" rel="stylesheet">
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script> -->
+
+<!-- ionic/angularjs js -->
+<script src="lib/ionic/js/ionic.bundle.js"></script>
+
+<!-- Carousal --> 
+<link href="lib/swiper/dist/css/swiper.min.css" rel="stylesheet"/>    
+    <script src="lib/swiper/dist/js/swiper.js"></script>
+    <script src="lib/angular-swiper/dist/angular-swiper.js"></script>   
+    
+
+<!-- cordova script (this will be a 404 during development) -->
+<script src="cordova.js"></script>
+
+</head>
+<body ng-controller="BusinessProductsController as bpc">
+    <ion-pane>
+    <ion-header-bar class="bar bar-header bar-positive">
+		
+			<div class="buttons alertbtn">
+				<a href="#" data-ng-click="bpc.displayCustomersBell(); bpc.openModal();">
+					<span style="font-size: 250%;" class="ion-ios-bell" data-pack="ios" data-tags="right">
+					<span class="badge badge-assertive hide">{{customercount}}</span>
+					</span>
+				</a>
+			</div>
+			<h1 class="title titlealign">ClientLite Application</h1>
+			<div class="buttons">
+				<button class="icon ion-ios-person">JOHN BAKER</button>&nbsp;<button class=" icon ion-log-out" title="logout"></button>
+			</div>
+		
+    </ion-header-bar>
+<ion-content>
+<div class="row responsive-md indexheader">
+
+    <div class="col col-50 col-right" ng-if="bpc.bankCustomers"> 
+    <div class="recommendedProducts text-center">Recommended Products</div>
+              <div class="swiper-wrapper-main productcontainer">
+                     <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="true" slides-per-view="3" space-between="20" pagination-clickable="false" centeredSlides = "true" override-parameters="{effect: 'coverflow',coverflow: {rotate: 25,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}">
+                     <ks-swiper-slide class="swiper-slide" ng-repeat="s in ['golden.png','sales.png','service.png'] track by $index">
+                       <img class="center" data-ng-src="img/jake/appimg/{{s}}">
+                     </ks-swiper-slide>                
+                     </ks-swiper-container>
+              </div> 
+    </div>
+    <!--  ng-class="{!bpc.bankCustomers: }" -->
+    <div class="col col-50 noborder-right" ng-class="{'searchcenter':!bpc.bankCustomers}" >  
+    <div class="searchClientText text-center">Lookup Your Client</div>
+    <form name="searchForm" class="searchClientForm">
+
+    <div class="item item-input-inset">
+	  <input type="hidden" data-ng-model="bpc.user.pageStart" />
+      <label class="item item-input-wrapper">          
+      <input type="text" placeholder="First Name (Required)" data-ng-model="bpc.user.firstName" data-ng-required=true />
+      </label>&nbsp;
+      <label class="item item-input-wrapper">          
+      <input type="text" placeholder="Last Name (Required)" data-ng-model="bpc.user.lastName" data-ng-required=true />
+      </label>
+     
+   </div>
+   <div class="item item-input-inset">
+    <button data-ui-sref="searchClient" class="button ion-ios-search" data-ng-click="displayCustomers();openModal();" data-ng-disabled="searchForm.$invalid"> Search</button>
+   </div>     
+        </form>      
+   </div> 
+
+</div>
+<div data-ui-view>
+<h1 class="welcome-message text-center">Welcome to Client Application</h1>
+<h3 class="welcome-message1 text-center">Serve and engage with your clients better</h3>
+</div>
+</ion-content>
+
+
+<ion-footer-bar align-title="center" class="bar-dark">
+  <div class="buttons">
+  </div>
+</ion-footer-bar>
+</ion-pane>
+<!-- your app's js -->
+<script src="dist/app.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!--<div class="container-page container" id="main-page">-->
+	<!--<div id="masthead" class="header cf row" role="banner">-->
+		<!--<div class="logo col-md-3 col-sm-5 col-xs-7 "><a href="#" id="wellFargoLogoLnk"><img src="https://www01.wellsfargomedia.com/assets/images/global/wf-logo.gif" alt="Wells Fargo Home Page" /></a>-->
+	<!--</div>-->
+	<!--<div class="col-md-2 col-sm-2 col-xs-4 pull-right">-->
+		<!--<a class="complaint-form-sign-off js-nav-away-link pull-right" id="signOffHeaderLnk" href="#">Sign Off</a>-->
+	<!--</div>-->
+<!--</div>-->
+<!-- Main Page -->
+<div class="cf body-content" >
+	<h1 id="skip-to-content">TPSP Resolved Non-service</h1>
+	<p class="optional-indicator pull-left">All fields required unless indicated as optional</p> <br />
+	
+	<section class="content-wrapper" role="main">
+		<form novalidate class="content" name="complaintFormthirdParty" ng-submit="vm.previewForm()">
+			<div class="row">
+				<p>
+					<label for="dateReceivedByWellsFargo">Date Complaint Received (mm/dd/yyyy)</label>
+					<md-content class="datepicker-wrapper" ng-class="{errorEmpty:(submitted && complaintFormthirdParty.receivedDate.$invalid)  || recievedDateerror}">
+					<md-datepicker ng-model="receivedDate" md-placeholder="Enter date"
+					md-min-date="minDate" md-max-date="maxDate" ng-blur="receive()" required="required">
+					</md-datepicker>
+					</md-content>
+				</p>
+			</div>
+			<div class="row">
+				<p>
+					<label for="communicationMedium">Communication medium</label>
+					<select name="communicationMedium" ng-model="communicationMedium" ng-class="{errorEmpty:submitted && complaintFormthirdParty.communicationMedium.$invalid}" required="required">
+						<option value="">Select one</option>
+						<option value="#">Phone</option>
+						<option value="#">In-person</option>
+						<option value="#">Internet</option>
+						<option value="#">Email</option>
+						<option value="#">Letter</option>
+						<option value="#">WF Complaints Portal</option>
+						<option value="#">Survey</option>
+					</select>
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="complaintFirstname">Complainant First Name</label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="complaintFirstname" minlength="1" ng-pattern='/^[A-Za-z ]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintFirstname.$invalid}" ng-model="complaintFirstname" required="required" />
+				</p>
+				<p class="col-md-4 col-sm-4">
+					<label for="complaintLastname">Complainant Last Name</label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="complaintLastname" minlength="1" ng-pattern='/^[A-Za-z ]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintLastname.$invalid}" ng-model="complaintLastname" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="complaintPhoneNumber">Complainant Phone Number</label>
+					<input type="text"  name="complaintPhoneNum" ng-pattern='/^[0-9 -]*$/' class="col-md-12 col-sm-12" ng-class="{errorEmpty:submitted
+					&& complaintFormthirdParty.complaintPhoneNum.$invalid}" ng-model="complaintPhoneNum" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="complaintemail">Complainant Email Address</label>
+					<input type="text" ng-pattern='/^[0-9 -]*$/' class="col-md-12 col-sm-12" ng-class="{errorEmpty:submitted
+					&& complaintFormthirdParty.complaintemail.$invalid}" ng-model="complaintemail" required="required" />
+				</p>
+			</div>
+			
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="accountNumber">Account number</label>
+					<input type="text" class="col-md-12 col-sm-12" value="" minlength="1" maxlength="23" ng-pattern='/^[0-9 -]*$/'  name="accountNum"  ng-class="{errorEmpty:submitted
+					&& complaintFormthirdParty.accountNum.$invalid}" ng-model="accountNum" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="noteSummary">Note - Summary</label>
+					<textarea ng-model="complaintFormSummary" name="complaintFormSummary"  ng-pattern='/^[A-Za-z ]*$/' class="summary-note col-md-12 col-sm-12" ng-trim="false" maxlength="1000" ng-class="{errorEmpty:submitted && complaintFormthirdParty.complaintFormSummary.$invalid}" required="required"></textarea><br />
+					<span class="char-limit">(Max Characters:1000)&nbsp;You have {{1000 - complaintFormSummary.length}} characters left</span>
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="TpspComName">TPSP Company Name</label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="TPSPComName" minlength="1" maxlength="23" ng-pattern='/^[A-Za-z ]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.TPSPComName.$invalid}" ng-model="TPSPComName" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="TpspContactName">TPSP Contact Name (first and last)</label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="TPSPContactName" minlength="1" ng-pattern='/^[A-Za-z ]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.TPSPContactName.$invalid}" ng-model="TPSPContactName" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="TpspContactNum">TPSP Contact Phone Number </label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="TPSPContactNum" minlength="1" ng-pattern='/^[0-9 -]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.TPSPContactNum.$invalid}" ng-model="TPSPContactNum" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-md-4 col-sm-4">
+					<label for="TpspTrimNum">TPSP Engagement TRIMS ID </label>
+					<input type="text" class="col-md-12 col-sm-12" value="" name="TPSPTrimNum" minlength="1" ng-pattern='/^[0-9 -]*$/' ng-class="{errorEmpty:submitted && complaintFormthirdParty.TPSPTrimNum.$invalid}" ng-model="TPSPTrimNum" required="required" />
+				</p>
+			</div>
+			<div class="row">
+				<div class="pull-right">
+					<button type="button" class="start-btn" value="reset" ng-click="vm.resetForm()">Start Over</button>
+					<button type="submit" class="preview-btn" value="save">Preview</button>
+				</div>
+				<div class="uploaded-fileInfo col-md-9 pull-left"></div>
+				<a href="">Upload supporting documents</a>
+			</div>
+		</form>
+	</section>
+	
+</div>
+<!--&lt;!&ndash; Footer &ndash;&gt;-->
+<!--<div class="footer" role="contentinfo">-->
+	<!---->
+	<!--<p class="copy">&copy; 1999-<script type="text/javaScript">-->
+	<!--//<![CDATA[ today=new Date(); year0=today.getFullYear(); document.write(year0); //]]></script>2016 Wells Fargo. All rights reserved.</p>-->
+	<!--</script>-->
+<!--</div>-->
+<!--</div>-->

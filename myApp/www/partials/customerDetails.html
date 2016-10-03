@@ -1,0 +1,131 @@
+<ul class="list card" data-ng-if='customerDetail'>
+	<li class="item item-thumbnail-left " >  
+		<h2><strong>{{getCustomerName()}}</strong></h2>
+		<p> {{customerDetail.enterpriseID.value}}</p>
+		<p data-ng-if="customerDetail.email.value"><i class="icon ion-email emailAlign" ></i> {{customerDetail.email.value}}</p>
+		<p>Wallet: <i class="icon ion-social-usd blue"></i> <i class="icon ion-social-usd blue"></i></p>
+		<p class="enrolledproducts">
+			<span class="ion-android-done"></span><span class="blue">Mobile Banking</span><br>
+			<span class="ion-android-done"></span><span class="blue">Bill Pay</span><br>
+			<span class="ion-android-done"></span><span class="blue">Paperless</span>	
+		</p>
+	</li>
+	<li>
+		<div class="row">
+			<div class="col removeItemBdr">				
+				<ion-toggle ng-model="mask" toggle-class="toggle-positive" data-ng-change="toggleChange()">
+					<span class="subhead1">SSN/TIN</span>
+					<div><span ng-show="!mask">XXXXX{{customerDetail.ssntin.value.slice(5)}}</span><span ng-show="mask">{{customerDetail.ssntin.value}}</span></div>
+				</ion-toggle>
+				
+			</div>
+			
+			<div class="col removeItemBdr" data-ng-if="customerDetail.dob">
+				<ion-toggle ng-model="dob" toggle-class="toggle-positive">
+				  <span class="subhead1">Birth Date</span>
+				<div>
+					<span ng-show="dob">{{customerDetail.dob}}</span>
+					<span ng-show="!dob">XXXX{{customerDetail.dob.slice(6)}}</span>
+				</div>				  
+				</ion-toggle>
+			</div>	
+
+			<div class="col costCntrPadd" data-ng-if="customerDetail.sapcostCenter">
+				<span class="subhead1">Cost Center</span>
+				<div>
+					{{customerDetail.sapcostCenter.value}}
+				</div>
+			</div>				
+
+		</div>
+	</li>
+	
+	<li class="item item-divider">CONTACT DETAILS
+	</li>
+	
+	<li class="costCntrPadd row" >
+		
+	 <span data-ng-repeat="customerPhoneNumber in customerDetail.phoneNumber" class="col">
+	 <span data-ng-if="customerPhoneNumber.homeWorkCode == 'HOME'" class="icon ion-iphone"><span  class="subHead" > Phone(Home):</span> ({{customerPhoneNumber.number.slice(0, 3)}})-{{customerPhoneNumber.number.slice(3, 6)}}-{{customerPhoneNumber.number.slice(6, 10)}}</span>
+	 <span data-ng-if="customerPhoneNumber.homeWorkCode == 'WORK'" class="icon ion-android-call" data-ng-show="showWorkPhone"><span  class="subHead" > Phone(Work):</span> ({{customerPhoneNumber.number.slice(0, 3)}})-{{customerPhoneNumber.number.slice(3, 6)}}-{{customerPhoneNumber.number.slice(6, 10)}}</span>
+	 </span>
+	 <span class="col">
+	<a href="#" data-ng-hide="more" class="" data-ng-click="showWorkPhone= !showWorkPhone;more = !more; less = !less" >Show more</a>
+	<a href="#" data-ng-show="less" class="" data-ng-click="showWorkPhone= !showWorkPhone;less = !less;more=!more;">Show less</a></span>
+	 
+	</li>
+	
+	<li class="item item-divider item-icon-right">
+		 ADDITIONAL DETAILS 
+		<div class="icon " data-ng-click="showAddicon = !showAddicon;showAddress=!showAddress;">
+		<button class=" ion-plus-round" data-ng-show="!showAddicon"  ></button>
+		  <button data-ng-show="showAddicon" class=" ion-minus-round" ></button>
+		</div>
+	</li>
+	<li class="item" data-ng-show="showAddress">                    
+		<div class="marLeft addressmain detailmain">
+			<div data-ng-if="(customerDetail.address.addressLine1)"><span class="subHead">Street:</span> {{customerDetail.address.addressLine1}}</div>
+			<div data-ng-if="(customerDetail.address.city)"><span class="subHead">City:</span> {{customerDetail.address.city}}</div>
+			<div data-ng-if="(customerDetail.address.state.code)"><span class="subHead">State:</span> {{customerDetail.address.state.code}}</div>
+			<div data-ng-if="(customerDetail.address.postalArea)"><span class="subHead">Postal Area:</span> {{customerDetail.address.postalArea}}</div>
+			<div data-ng-if="(customerDetail.address.country.value)"><span class="subHead">Country:</span> {{customerDetail.address.country.value}}</div>	
+		</div>
+		<div class="marLeft addressmain">
+			<div data-ng-if="(customerDetail.lob.code)"><span class="subHead">LOB Indicator:</span> {{customerDetail.lob.code}}</div>
+			<div><span class="subHead">Military:</span> No</div>
+			<div><span class="subHead">Home Owner:</span> Yes</div>
+			<div data-ng-if="(customerDetail.address.postalArea)"><span class="subHead"></span>&nbsp;</div>
+			<div data-ng-if="(customerDetail.address.country.value)"><span class="subHead"></span>&nbsp;</div>
+		</div>
+		<div class="marLeft linkedacc">
+			<div><span class="subHead subHead1">Linked Account:  
+			<a href="#" title="show more accounts" data-ng-hide="moreAct" class="" data-ng-click="showAllAct= !showAllAct;moreAct = !moreAct; lessAct = !lessAct" ><i class="ion-ios-arrow-right"></i><i class="ion-ios-arrow-right"></i></a>
+	        <a href="#" title="show less" data-ng-show="lessAct" class="" data-ng-click="showAllAct= !showAllAct;lessAct = !lessAct;moreAct=!moreAct;"><i class="ion-ios-arrow-left"></i><i class="ion-ios-arrow-left"></i></a>
+			</span>
+			<div data-ng-repeat="accountDetails in customerDetail.customerAccountRelationship">
+			<span data-ng-show="$index == 0 || showAllAct">
+			<span class="subHead">Account Number:</span> {{accountDetails.account.accountIdentifier.accountNumber}}
+			<span class="subHead subHead2">Total Balance:</span> {{accountDetails.account.currentBalance}}</span>
+			</div>
+			</div>
+		</div>
+	</li>
+	<li class="item item-divider">RECENT ACTIVITIES</li>
+   <div class="swiper-wrapper-main activityslider">
+    <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="true" slides-per-view="3" space-between="95" pagination-clickable="false" centeredSlides = "false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 0,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
+            <ks-swiper-slide class="swiper-slide"  data-ng-repeat="recentActivities in cdc.recentActivities">
+            
+            <div class = "activity-container">
+            <div class = "activity-content-wrapper"> 
+              <span class = "activity-content-title">{{recentActivities.taskDescription}}</span> <br><br>
+              <span class = " activity-content-date">Date Of Occurrence : {{recentActivities.Date}}</span><br>
+              <span class="activity-desc-title">{{recentActivities.CustomerNote}}</span>
+              <div data-ng-if = "recentActivities.Status == 'completed'" >
+                 <span class = "activity-desc"> User requested more information about the Home Mortgage rates </span> 
+              </div>
+              <div data-ng-if = "recentActivities.Status == 'pending'" >
+                <span class = "activity-desc"> User requested cheque book to be delivered at Home address </span> 
+              </div> 
+              </div>
+
+            <!--  <div ng-switch on="recentActivities.Category">
+                  <div ng-switch-when="note">
+                       <img class="activity-icon" src ="../img/jake/svgs/note_icon.jpg"> 
+                  </div>
+                  <div ng-switch-when="Oppurtunity">
+                       <img class="activity-icon" src ="../img/jake/svgs/opportunity-icon.png">  
+                  </div>
+                  <div ng-switch-when="transaction">
+                      <img class="activity-icon" src ="../img/jake/svgs/transaction-icon.jpg"> 
+                  </div>
+                  <div ng-switch-default>
+                      <img class="activity-icon" src ="../img/jake/svgs/note_icon.jpg"> 
+                  </div>
+              </div> -->
+
+            </div>
+			
+            </ks-swiper-slide>  
+        </ks-swiper-container>
+        </div>
+</ul>

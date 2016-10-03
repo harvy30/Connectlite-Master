@@ -1,0 +1,38 @@
+<ion-modal-view>
+<ion-header-bar class="modalHead">
+<a class="ion-android-close" ng-click="closeModal()"></a>
+<div class="bar bar-header bar-positive title text-center"><h3 class="text-center">Your Clients</h3></div> 
+</ion-header-bar>
+<ion-content>
+<div data-ng-if="(bpc.pushedData)">
+	<div data-ng-if="(bpc.pushedData && 0 !== bpc.pushedData.length)">
+		<!-- Table Header -->
+		<div class="row header" >
+			<div class="col col-25 text-center">Name</div>
+			<div class="col col-55 address text-center">Notification Message</div>
+			<div class="col col-20 text-center">ECI</div>         
+		</div>
+
+		<div class="row contentrows" data-ng-repeat="data in (bpc.pushedData[0].EnterpriseCustomer) track by $index">
+			<div class="col col-25 ">
+				<a data-ui-sref="bellCustomer({id:data.EnterpriseID})" 
+					style="text-decoration: none;" 
+					ng-click="closeModal();"
+					ng-bind="data.EnterpriseIndNonIndInfo.EnterpriseIndInfo.IndName.FirstName + ' ' + data.EnterpriseIndNonIndInfo.EnterpriseIndInfo.IndName.LastName">
+				</a>
+			</div>
+			<div class="col col-55 address" ng-bind="data.NotificationMessage"></div>
+
+			<div class="col col-20 text-center" ng-bind="data.EnterpriseID"></div>
+		</div>
+				<!-- <ion-infinite-scroll data-ng-if="!bpc.completedLoading" on-infinite="addItems()" immediate-check="false" distance="1%"></ion-infinite-scroll> -->
+				<!-- <div class='item item-divider text-center itemcompleted' data-ng-show='bpc.completedLoading' ng-bind="bpc.completedLoadingMsg"></div> -->
+	</div>
+<!-- <div class="row" data-ng-show="(bpc.bankCustomers && bpc.bankCustomers.length<1)">
+  <div class="col col-30 text-center noClients">No Matching Clients Found</div>
+   </div>
+</div> -->
+</ion-content>
+
+</ion-modal-view>
+
